@@ -1,6 +1,6 @@
 //============================================================================
 // Name        : Library.cpp
-// Author      : 
+// Author      : Jose Alexis
 // Version     :
 // Copyright   : Your copyright notice
 // Description : Hello World in C++, Ansi-style

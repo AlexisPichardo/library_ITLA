@@ -12,8 +12,25 @@ using namespace std;
 
 void Menu::show()
 {
-	//TODO: Implement this method.
-	cout << "Implement the menu" << endl;
+	ifstream leer_archivo("Agenda.txt");
+		Contacto contacto;
+
+		leer_archivo.read((char *)&contacto, sizeof(contacto));
+		if(leer_archivo.fail())
+		{
+			cout <<" Ocurrio un ploblema, intentando abrir la agenda :(" <<endl;
+			exit(1);
+		}
+		cout <<"id   Nombre     Telefono"<<endl;
+		while(!leer_archivo.eof())
+		{
+			
+			cout <<endl <<contacto.id <<" -> "<<  contacto.nombre << "   " <<contacto.telefono << endl;
+			leer_archivo.read((char *)&contacto, sizeof(contacto));
+					
+		}
+		cout << endl;
+		leer_archivo.close();
 }
 
 Menu::Menu()
